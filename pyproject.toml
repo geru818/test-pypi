@@ -1,0 +1,37 @@
+[build-system]
+requires = ["flit_core >= 3.4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "count"
+dynamic = ["version"]
+dependencies = [
+    "typer",
+]
+
+requires-python = ">=3.8"
+authors = [
+  {name = "OCCI", email = "occi@example.com"},
+]
+
+description = "Count the length of name"
+license = {file = "LICENSE"}
+
+readme = "README.md"
+classifiers = [
+  "Development Status :: Alpha",
+  "Programming Language :: Python",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "pytest-cov",
+  "ruff",
+]
+
+[project.urls]
+Repository = "https://github.com/me/spam.git"
+
+[project.scripts]
+count = "count.test:app"
